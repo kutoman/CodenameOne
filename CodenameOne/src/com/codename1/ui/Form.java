@@ -1310,7 +1310,7 @@ public class Form extends Container {
              cnt.setWidth(getWidth());
              cnt.setHeight(getHeight());
              cnt.setShouldLayout(false);
-             cnt.setName("FormLayer: " + c.getName());
+             cnt.setName("FormLayer: " + c.getName()); //TODO this will always cause a NPE as c == null in this scope!
              formLayeredPane.add(cnt);
              return cnt;
         }
